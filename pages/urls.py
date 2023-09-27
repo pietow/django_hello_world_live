@@ -1,6 +1,6 @@
-from django.urls import path
+from django.urls import path, re_path
 from .views import homePageView
 
 urlpatterns = [
-    path("", homePageView, name="home")
+    re_path(r"^\d+$", homePageView, name="home")
 ]
